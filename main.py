@@ -49,6 +49,8 @@ def update():
 
         USER[uid].update(info)
         print('0822 修改测试-2')
+        print('使用 vigor2 进行了修改')
+        print('使用 vigor1 进行了修改')
         return redirect('/user/info?id=%s' % uid)
 
     else:
