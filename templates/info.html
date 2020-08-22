@@ -1,0 +1,14 @@
+{% extends "base.html" %}  # 继承 base.html
+
+{% block content %}
+<h2>用户信息</h2>
+<img src="/day2%20class/static/img/{{ uid }}.jpg" width="300px">
+<ul>
+    <li>姓名：{{ user.name }}</li>
+    <li>性别：{{ user.gender }}</li>
+    <li>城市：{{ user.city }}</li>
+</ul>
+<a href="/user/update?uid={{ uid }}">用户信息修改</a>
+<!--#这个uid 是要根据你度服务器里取得是啥，不必太纠结-->
+<!--#这是一个跳转的路径，是要到服务器里面请求的某一块，我给过去的参数就是 uid-->
+{% endblock %}

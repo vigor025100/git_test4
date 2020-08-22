@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>菜单</title>
+</head>
+<body>
+    <ul>
+        <h1>今日主推</h1>
+        {% for item in menu_items %}
+            {% if loop.first %}
+                <li><strong>{{ item }}</strong></li>
+            {% else %}
+                <li>{{ item }}</li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+</body>
+</html>

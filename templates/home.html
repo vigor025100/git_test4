@@ -1,0 +1,14 @@
+{% extends "base.html" %}  #继承了基础模板
+
+<!--定义子模板内容-->
+{% block content %}
+<h1>学生名单</h1>
+<hr/>
+<ul>
+    {% for use in user_list %}
+    <li>
+        <a href="/user/info?id={{ use.0 }}">{{ use.1 }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
